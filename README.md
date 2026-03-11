@@ -5,7 +5,9 @@
 <h1 align="center">🌾 SpeakHarvest — Voice-Powered Multilingual Agri Marketplace</h1>
 
 <p align="center">
-  <b>Bridging the communication gap between Indian farmers and buyers through AI-powered voice, real-time translation, and smart market insights.</b>
+  <b><em>Just Speak. The Market Listens.</em></b>
+  <br/>
+  <sub>Bridging the communication gap between Indian farmers and buyers through AI-powered voice, real-time translation, and smart market insights.</sub>
 </p>
 
 <p align="center">
