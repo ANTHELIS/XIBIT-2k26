@@ -375,6 +375,15 @@ We welcome contributions! Here's how to get started:
     <br/>
     <sub>Contributor</sub>
   </td>
+  <td align="center">
+    <a href="https://github.com/bidisha861-dev">
+      <img src="https://github.com/bidisha861-dev.png" width="80px;" alt="bidisha861-dev" style="border-radius:50%"/>
+      <br/>
+      <sub><b>@bidisha861-dev</b></sub>
+    </a>
+    <br/>
+    <sub>Contributor</sub>
+  </td>
 </tr>
 </table>
 
