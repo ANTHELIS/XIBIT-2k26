@@ -22,7 +22,7 @@ const ThemeToggle: React.FC = () => {
         <button
             ref={buttonRef}
             onClick={handleClick}
-            className="relative p-2.5 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all press-scale z-[60]"
+            className="relative p-2.5 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all press-scale z-[60] hover-wiggle"
             aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
         >
             <div className="relative w-5 h-5">

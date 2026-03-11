@@ -305,6 +305,17 @@ img[src=""] {
     }
 }
 
+@keyframes wiggle {
+    0%,
+    100% {
+        transform: rotate(-3deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+}
+
 /* --- Animation Utility Classes --- */
 
 .animate-fade-in {
@@ -359,6 +370,14 @@ img[src=""] {
 
 .animate-subtle-pulse {
     animation: subtle-pulse 2s ease-in-out infinite;
+}
+
+.animate-wiggle {
+    animation: wiggle 0.3s ease-in-out infinite;
+}
+
+.hover-wiggle:hover {
+    animation: wiggle 0.3s ease-in-out infinite;
 }
 
 /* --- Stagger Delays (for lists/grids) --- */
