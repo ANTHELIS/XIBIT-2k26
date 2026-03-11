@@ -1,188 +1,175 @@
-## Project Setup
+<p align="center">
+  <img src="./assets/banner.png" alt="SpeakHarvest Banner" width="100%"/>
+</p>
 
-This project is organized into two separate directories:
-- `frontend/`: React application (Vite)
-- `backend/`: Node.js/Express server
+<h1 align="center">🌾 SpeakHarvest — Voice-Powered Multilingual Agri Marketplace</h1>
 
-### Prerequisites
+<p align="center">
+  <b>Bridging the communication gap between Indian farmers and buyers through AI-powered voice, real-time translation, and smart market insights.</b>
+</p>
 
-- Node.js (v18+ recommended)
-- MongoDB (Local or Atlas URI)
+<p align="center">
+  <a href="#-key-features"><img src="https://img.shields.io/badge/Features-🎙️_Voice_AI-059669?style=for-the-badge&labelColor=1a1a2e" alt="Features"/></a>
+  <a href="#-tech-stack"><img src="https://img.shields.io/badge/Stack-React_|_Node_|_Gemini-3b82f6?style=for-the-badge&labelColor=1a1a2e" alt="Tech Stack"/></a>
+  <a href="#-getting-started"><img src="https://img.shields.io/badge/Setup-Quick_Start-f59e0b?style=for-the-badge&labelColor=1a1a2e" alt="Setup"/></a>
+  <a href="#-system-architecture"><img src="https://img.shields.io/badge/Docs-Architecture-8b5cf6?style=for-the-badge&labelColor=1a1a2e" alt="Architecture"/></a>
+</p>
 
-### Installation
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=white" alt="React 19"/>
+  <img src="https://img.shields.io/badge/TypeScript-5.8-3178c6?logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Vite-6.2-646cff?logo=vite&logoColor=white" alt="Vite"/>
+  <img src="https://img.shields.io/badge/Node.js-Express_5-339933?logo=nodedotjs&logoColor=white" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/MongoDB-Mongoose_9-47a248?logo=mongodb&logoColor=white" alt="MongoDB"/>
+  <img src="https://img.shields.io/badge/Google_Gemini-2.0_Flash-4285f4?logo=googlegemini&logoColor=white" alt="Gemini AI"/>
+  <img src="https://img.shields.io/badge/License-ISC-green" alt="License"/>
+</p>
 
-1.  **Frontend Setup**
-    ```bash
-    cd frontend
-    npm install
-    ```
+---
 
-2.  **Backend Setup**
-    ```bash
-    cd backend
-    npm install
-    ```
+## 🚀 The Problem
 
-### Environment Configuration
+> **75% of Indian farmers** speak regional languages and lack digital literacy. Existing agri-marketplaces are text-heavy, English-first, and inaccessible — leaving millions unable to negotiate fair prices or access market intelligence.
 
-Both the `frontend` and `backend` directories have their own `.env` configuration.
+**SpeakHarvest** solves this with a **voice-first, AI-native** platform where farmers and buyers can list, discover, negotiate, and trade crops — **entirely through voice**, in **6+ Indian languages**, with **zero typing required**.
 
-**Frontend (`frontend/.env`)**:
-```env
-GEMINI_API_KEY=your_gemini_api_key_here
+---
+
+## ✨ Key Features
+
+### 🎙️ Intelligent Voice Assistant (Gemini Live)
+The platform features a deeply integrated, real-time voice assistant powered by **Google Gemini 2.0 Flash** with **multilingual** support (English & Regional Languages):
+
+<table>
+<tr>
+<td width="50%">
+
+#### 🛒 For Buyers
+- **Advanced Market Search** — Filter by location, price range, freshness, farmer name, or crop
+  - *"Show me wheat available in Punjab"*
+  - *"Crops under ₹50/kg"*
+  - *"Show listings added today"*
+- **Negotiation Aide** — AI reads message history & sends replies via voice
+- **Smart Sorting** — Instant sort by price (Low ↔ High)
+
+</td>
+<td width="50%">
+
+#### 🧑‍🌾 For Farmers
+- **Hands-Free Inventory** — Create, update & delete listings by voice
+  - *"Post 100kg of Potatoes at ₹25/kg in Nashik"*
+  - *"Change the price of Onions to ₹30"*
+- **Voice Inbox** — *"Do I have any new messages?"*
+- **Instant Replies** — Dictate responses without typing
+- **Market Insights** — AI-generated pricing & trend analysis
+
+</td>
+</tr>
+</table>
+
+### 🌐 Multilingual & Accessible
+| Feature | Description |
+|:--------|:------------|
+| **Real-time Chat Translation** | Messages auto-translate between farmer & buyer preferred languages |
+| **6 Language Support** | Hindi, English, Marathi, Telugu, Tamil, Bengali |
+| **Audio-First Interface** | Full platform control through voice — zero typing needed |
+
+### ✨ Premium UI/UX
+| Feature | Description |
+|:--------|:------------|
+| 🌙 **Immersive Dark Mode** | Circular reveal animation, system preference detection, persistent settings |
+| 🔮 **Glassmorphism** | Modern translucent UI elements with backdrop blur |
+| ⚡ **Micro-interactions** | Hover lifts, glow effects, press-scale, ripple buttons, shine overlays |
+| 🎨 **Dynamic Transitions** | Seamless color morphing across all themes |
+
+### 🔒 Enterprise-Grade Security
+| Layer | Implementation |
+|:------|:--------------|
+| **DDoS Protection** | `express-rate-limit` — brute-force & bot swarm prevention |
+| **NoSQL Injection Defense** | `mongo-sanitize` — input scrubbing on all objects |
+| **Header Armor** | `helmet` — XSS, clickjacking, MIME-sniffing protection |
+| **Payload Limits** | 50KB JSON body caps — prevents memory-exhaustion DOS |
+
+---
+
+## 🛠 Tech Stack
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    FRONTEND (Client)                     │
+│  React 19 · TypeScript · Vite 6 · TailwindCSS · Lucide  │
+│  Google GenAI SDK · WebSocket Streaming                  │
+├─────────────────────────────────────────────────────────┤
+│                     BACKEND (Server)                     │
+│  Node.js · Express 5 · Mongoose 9 · Multer · Cloudinary │
+│  Helmet · Rate-Limiter · Mongo-Sanitize                  │
+├─────────────────────────────────────────────────────────┤
+│                     DATA & AI LAYER                      │
+│  MongoDB · Google Gemini 2.0 Flash · Cloudinary CDN      │
+└─────────────────────────────────────────────────────────┘
 ```
 
-**Backend (`backend/.env`)**:
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-```
+---
 
-### Running the Application
-
-You need to run both the backend and frontend terminals.
-
-**1. Start the Backend Server**
-
-Open a terminal and navigate to the `backend` directory:
-```bash
-cd backend
-npm run dev
-```
-The server will start on `http://localhost:5000`.
-
-**2. Start the Frontend**
-
-Open a new terminal and navigate to the `frontend` directory:
-```bash
-cd frontend
-npm run dev
-```
-The frontend will start on the URL provided by Vite (typically `http://localhost:5173`).
-
-
-
-# Key Features
-
-## 🎙️ Intelligent Voice Assistant (Gemini Live)
-The platform features a deeply integrated, real-time voice assistant powered by **Google Gemini 2.0 Flash**. It supports **multilingual** interaction (English & Regional Languages) and provides specialized tools for each user role:
-
-### For Buyers 🛒
-*   **Advanced Market Search**: 
-    *   Filter by **Location** (e.g., *"Show me wheat available in Punjab"*).
-    *   Filter by **Price Range** (e.g., *"Crops under ₹50/kg"*).
-    *   Filter by **Freshness/Time** (e.g., *"Show listings added today"* or *"Newest first"*).
-    *   Search by **Farmer Name** or **Crop Name**.
-*   **Negotiation Aide**: The assistant acts as a translator and mediator. It can **read message history** summary and **send replies** via voice.
-*   **Smart Sorting**: Sort the marketplace by price (Low-to-High or High-to-Low) instantly.
-
-### For Farmers 🧑‍🌾
-*   **Hands-Free Inventory Management**: 
-    *   **Create Listings**: *"Post 100kg of Potatoes at ₹25 per kg in Nashik"*
-    *   **Update Stock**: *"Change the price of Onions to ₹30"*
-    *   **Delete Listings**: *"Remove my Tomato listing"*
-*   **Voice Inbox**: Ask *"Do I have any new messages?"* or *"Read the last message from the buyer"*.
-*   **Instant Replies**: Dictate replies to buyers without typing.
-*   **Market Insights**: Get AI-generated price recommendations and trend analysis before listing.
-
-## 🌐 Multilingual & Accessible
-*   **Real-time Chat Translation**: Messages are automatically translated between the Farmer's and Buyer's preferred languages.
-*   **Audio-First Interface**: Designed for accessibility, allowing full platform control through voice commands.
-
-## ✨ Premium UI/UX Experience
-*   **Immersive Dark Mode** 🌙:
-    *   Full dark theme support across all dashboards and components.
-    *   **Circular Reveal Animation**: A cinematic, expanding circle effect when toggling themes.
-    *   System preference detection with persistent settings.
-*   **Visual Delight**:
-    *   **Glassmorphism**: Modern, translucent UI elements with blur effects.
-    *   **Micro-interactions**: Hover lifts, glow effects, and smooth button presses.
-    *   **Dynamic Transitions**: Seamless color morphing for a polished feel.
-
-## 🔒 Enterprise Security
-*   **DDoS Protection**: Integrated `express-rate-limit` prevents brute-forcing and bot swarms.
-*   **NoSQL Defense**: `express-mongo-sanitize` proactively scrubs incoming objects to stop injection attacks.
-*   **Header Armor**: `helmet` guards against XSS, clickjacking, and MIME-sniffing exploits.
-*   **Payload Limits**: Strict 50kb caps on JSON body parsers prevent remote memory-exhaustion (DOS) attacks.
-
-
-# System Architecture: SpeakHarvest
-
-This document provides a high-level overview of the system architecture for specific use by the hackathon organization team and developers.
-
-## System Overview
-
-**SpeakHarvest** is a web-based platform bridging Farmers and Buyers. It uses a modern **React** frontend for the user interface, a **Node.js/Express** backend for business logic, **MongoDB** for data persistence, and **Google Gemini AI** for real-time translation and market insights.
+## 📐 System Architecture
 
 ```mermaid
 graph TD
-    %% Styling
     classDef client fill:#e3f2fd,stroke:#1565c0,stroke-width:2px;
     classDef server fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
     classDef db fill:#fff3e0,stroke:#ef6c00,stroke-width:2px;
     classDef external fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;
     classDef actor fill:#fafafa,stroke:#333,stroke-width:1px,stroke-dasharray: 5 5;
 
-    %% Actors
-    Farmer(🧑‍🌾 Farmer)
-    Buyer(🏢 Buyer)
+    Farmer["🧑‍🌾 Farmer"]
+    Buyer["🏢 Buyer"]
 
-    subgraph Client [Frontend - React/Vite]
+    subgraph Client ["Frontend — React / Vite"]
         direction TB
-        App[App.tsx<br/>Router & State]
-        UI[UI Components<br/>Farmer/Buyer Dashboard]
-        API_Client[api.ts<br/>HTTP Fetch Wrapper]
-        Gemini_Service[geminiService.ts<br/>AI Client SDK]
-        
+        App["App.tsx — Router & State"]
+        UI["UI Components — Farmer & Buyer Dashboards"]
+        API_Client["api.ts — HTTP Fetch Wrapper"]
+        Gemini_Service["geminiService.ts — AI Client SDK"]
+
         App --> UI
         UI --> API_Client
         UI --> Gemini_Service
     end
 
-    subgraph Backend [Backend Server - Node.js/Express]
+    subgraph Backend ["Backend — Node.js / Express"]
         direction TB
-        Server_Entry[src/index.js<br/>App Entry Point]
-        Auth_Route[User Routes<br/>/api/users]
-        Listing_Route[Listing Routes<br/>/api/listings]
-        Message_Route[Message Routes<br/>/api/messages]
-        
+        Server_Entry["src/index.js — Entry Point"]
+        Auth_Route["User Routes — /api/users"]
+        Listing_Route["Listing Routes — /api/listings"]
+        Message_Route["Message Routes — /api/messages"]
+
         Server_Entry --> Auth_Route
         Server_Entry --> Listing_Route
         Server_Entry --> Message_Route
     end
 
-    subgraph Database [Data Layer - MongoDB]
-        Mongo_Users[(User Collection)]
-        Mongo_Listings[(Listing Collection)]
-        Mongo_Messages[(Message Collection)]
+    subgraph Database ["Data Layer — MongoDB"]
+        Mongo_Users[("User Collection")]
+        Mongo_Listings[("Listing Collection")]
+        Mongo_Messages[("Message Collection")]
     end
 
-    subgraph External [External Services]
-        Google_AI[✨ Google Gemini 2.0<br/>Flash/Pro Models]
+    subgraph External ["External Services"]
+        Google_AI["✨ Google Gemini 2.0 Flash"]
+        Cloudinary_CDN["☁️ Cloudinary CDN"]
     end
 
-    %% Interactions
     Farmer -->|Uses UI| Client
     Buyer -->|Uses UI| Client
 
-    %% Client to Backend
-    API_Client -->|HTTP/REST JSON| Server_Entry
-    API_Client -->|Login/Register| Auth_Route
-    API_Client -->|CRUD Listings| Listing_Route
-    API_Client -->|Send/Get Msgs| Message_Route
+    API_Client -->|REST JSON| Server_Entry
+    Gemini_Service <-->|WebSocket Stream — Audio & Text| Google_AI
 
-    %% Client to AI (Direct)
-    Gemini_Service <-->|WebSocket/Stream<br/>Audio & Text| Google_AI
-    Gemini_Service -->|Generate Market Insight<br/>Translate Text| Google_AI
-
-    %% Backend to Database
     Auth_Route -->|Read/Write| Mongo_Users
     Listing_Route -->|Read/Write| Mongo_Listings
     Message_Route -->|Read/Write| Mongo_Messages
+    Listing_Route -->|Image Upload| Cloudinary_CDN
 
-    %% Message Flow context
-    Message_Route -.->|Stores Msgs| Mongo_Messages
-    
     class Client client;
     class Backend server;
     class Database db;
@@ -190,41 +177,218 @@ graph TD
     class Farmer,Buyer actor;
 ```
 
-## Key Components
+---
 
-### 1. Client (Frontend)
-- **Framework**: React 19 with Vite.
-- **Language**: TypeScript.
-- **Key Files**:
-    - `src/App.tsx`: Main application controller handling routing (Language -> Role -> Auth -> Dashboard).
-    - `src/api.ts`: Centralizes all backend API calls (Login, Listings, Messages).
-    - `src/services/geminiService.ts`: Checkpoints for Google GenAI integration (Market insights, Translation, Live Audio).
+## 📁 Project Structure
 
-### 2. Backend (Server)
-- **Runtime**: Node.js.
-- **Framework**: Express.js.
-- **Main Entry**: `backend/src/index.js`.
-- **API Routes**:
-    - `POST /api/users/login`: Handles user authentication and creation.
-    - `GET/POST /api/listings`: Manages crop listings (CRUD).
-    - `GET/POST /api/messages`: Handles inter-user messaging.
+```
+XIBIT-2k26/
+├── frontend/                   # React + TypeScript + Vite
+│   ├── src/
+│   │   ├── App.tsx             # Main controller — routing & state
+│   │   ├── api.ts              # Centralized backend API calls
+│   │   ├── types.ts            # TypeScript interfaces
+│   │   ├── constants.ts        # Translations, mock data, configs
+│   │   ├── index.css           # Global styles & design system
+│   │   ├── components/
+│   │   │   ├── LanguageSelector.tsx
+│   │   │   ├── LanguageDropdown.tsx
+│   │   │   ├── LiveAssistant.tsx    # Gemini voice UI
+│   │   │   ├── ThemeToggle.tsx      # Dark mode toggle
+│   │   │   └── NameCollectionModal.tsx
+│   │   ├── pages/
+│   │   │   ├── FarmerDashboard.tsx   # Full farmer experience
+│   │   │   └── BuyerDashboard.tsx    # Full buyer experience
+│   │   ├── services/
+│   │   │   └── geminiService.ts     # Google GenAI integration
+│   │   ├── context/                 # React context providers
+│   │   └── utils/                   # Utility functions
+│   ├── index.html
+│   ├── vite.config.ts
+│   └── tsconfig.json
+│
+├── backend/                    # Node.js + Express
+│   ├── src/
+│   │   ├── index.js            # Server entry — middleware & routes
+│   │   ├── config/             # Database & service configs
+│   │   ├── models/
+│   │   │   ├── User.js
+│   │   │   ├── Listing.js
+│   │   │   └── Message.js
+│   │   ├── routes/
+│   │   │   ├── userRoutes.js
+│   │   │   ├── listingRoutes.js
+│   │   │   └── messageRoutes.js
+│   │   ├── middlewares/        # Auth, rate-limit, sanitization
+│   │   └── utils/              # Helper functions
+│   └── package.json
+│
+├── DEPLOYMENT.md               # Deployment guide (Vercel + Render)
+└── README.md                   # ← You are here
+```
 
-### 3. Database
-- **System**: MongoDB (via Mongoose ODM).
-- **Collections**:
-    - `users`: Stores profile info (Phone, Role, Language).
-    - `listings`: Stores crop details linked to farmers.
-    - `messages`: Stores chat history between users.
+---
 
-### 4. Artificial Intelligence
-- **Provider**: Google Gemini API.
-- **Integration**: Direct Client-Side integration (Low latency).
-    - Real-time Audio Streaming (Gemini Live).
-    - Structured Market Data Generation (JSON Mode).
-    - Multi-modal interaction.
+## ⚡ Getting Started
 
-## Contributors
+### Prerequisites
 
-We welcome contributions! A special thanks to all the developers who have helped build and improve SpeakHarvest:
-*   **[@urmipaul007](https://github.com/urmipaul007)** - *Frontend Enhancements & UI Polish*
+| Tool | Version |
+|:-----|:--------|
+| **Node.js** | v18+ recommended |
+| **MongoDB** | Local or [Atlas](https://www.mongodb.com/atlas) |
+| **Gemini API Key** | [Get one here](https://aistudio.google.com/apikey) |
 
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/ANTHELIS/XIBIT-2k26.git
+cd XIBIT-2k26
+```
+
+### 2. Backend Setup
+
+```bash
+cd backend
+npm install
+```
+
+Create a `backend/.env` file:
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+```
+
+### 3. Frontend Setup
+
+```bash
+cd frontend
+npm install
+```
+
+Create a `frontend/.env` file:
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+### 4. Run the Application
+
+Open **two terminals**:
+
+```bash
+# Terminal 1 — Backend
+cd backend
+npm run dev          # → http://localhost:5000
+```
+
+```bash
+# Terminal 2 — Frontend
+cd frontend
+npm run dev          # → http://localhost:5173
+```
+
+> **🎉 That's it!** Open `http://localhost:5173` in your browser and start speaking!
+
+---
+
+## 🌍 Deployment
+
+The app is designed for seamless cloud deployment:
+
+| Service | Platform | Root Directory |
+|:--------|:---------|:---------------|
+| **Backend** | [Render](https://render.com) | `backend/` |
+| **Frontend** | [Vercel](https://vercel.com) | `frontend/` |
+
+> See the full deployment guide in [`DEPLOYMENT.md`](./DEPLOYMENT.md).
+
+---
+
+## 🔌 API Reference
+
+### User Routes — `/api/users`
+| Method | Endpoint | Description |
+|:-------|:---------|:------------|
+| `POST` | `/api/users/login` | Login or auto-register a user |
+| `PUT` | `/api/users/:id` | Update user profile |
+
+### Listing Routes — `/api/listings`
+| Method | Endpoint | Description |
+|:-------|:---------|:------------|
+| `GET` | `/api/listings` | Fetch all crop listings |
+| `POST` | `/api/listings` | Create a new listing |
+| `PUT` | `/api/listings/:id` | Update an existing listing |
+| `DELETE` | `/api/listings/:id` | Delete a listing |
+
+### Message Routes — `/api/messages`
+| Method | Endpoint | Description |
+|:-------|:---------|:------------|
+| `GET` | `/api/messages/:userId` | Get messages for a user |
+| `POST` | `/api/messages` | Send a new message |
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Here's how to get started:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feat/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feat/amazing-feature`)
+5. **Open** a Pull Request
+
+---
+
+## 👥 Team
+
+<table>
+<tr>
+  <td align="center">
+    <a href="https://github.com/ANTHELIS">
+      <img src="https://github.com/ANTHELIS.png" width="80px;" alt="ANTHELIS" style="border-radius:50%"/>
+      <br/>
+      <sub><b>@ANTHELIS</b></sub>
+    </a>
+    <br/>
+    <sub>Full-Stack • AI Integration • Architecture</sub>
+  </td>
+  <td align="center">
+    <a href="https://github.com/urmipaul007">
+      <img src="https://github.com/urmipaul007.png" width="80px;" alt="urmipaul007" style="border-radius:50%"/>
+      <br/>
+      <sub><b>@urmipaul007</b></sub>
+    </a>
+    <br/>
+    <sub>Frontend Enhancements • UI Polish</sub>
+  </td>
+  <td align="center">
+    <a href="https://github.com/pritamroman07-droid">
+      <img src="https://github.com/pritamroman07-droid.png" width="80px;" alt="pritamroman07-droid" style="border-radius:50%"/>
+      <br/>
+      <sub><b>@pritamroman07-droid</b></sub>
+    </a>
+    <br/>
+    <sub>Contributor</sub>
+  </td>
+</tr>
+</table>
+
+---
+
+## 📜 License
+
+This project is licensed under the **ISC License**.
+
+---
+
+<p align="center">
+  <sub>Built with ❤️ for Indian farmers and buyers • Powered by Google Gemini AI</sub>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Made_in-India_🇮🇳-059669?style=flat-square" alt="Made in India"/>
+</p>
